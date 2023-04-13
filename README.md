@@ -72,4 +72,17 @@ The dataset comprises several screenplays directed and/or written by Quentin Tar
 
 Additionally, screenplays have specific structures, and there was variation between those in our dataset due to different formatting (e.g. HTML to TXT conversion). It would have been time-consuming to adapt ```scripts/preprocess{_raw}.py``` to every screenplay, so we decided to catch as many of these differences as possible within a general preprocessing paradigm. Still, the paradigm is not comprehensive, which we also expect to impact the model.<br>
 
-As expected, our generated text was quite nonsensical. After running generation with the standard parameters, we wondered what the text would look like if we decreased the temperature. Our intuition was that the text at least would be more grammatical, even if at the expense of output diversity. This was more or less the case, albeit largely due to the increased presence of \<eos\> and \<unk\> tokens.
+As expected, our generated text was quite nonsensical. After running generation with the standard parameters, we wondered what the text would look like if we decreased the temperature. Our intuition was that the text at least would be more grammatical, even if at the expense of output diversity. This was more or less the case, albeit largely due to the increased presence of \<eos\> and \<unk\> tokens.<br>
+
+Making the preprocessing paradigm more precise might improve the quality of generated text.
+
+## 2. Parameter tuning: Experimenting with dropout
+For training with modifications to the dropout value, we created a copy of the training bash script titled ```train_dropout.sh```. The dropout values were modified in increments of 0.25, i.e. {0, 0.25, 0.50, 0.75, 1}, and each model was saved to a separate file {models/model_2-{1, 2, 3, 4, 5}}, respectively. The embedding size and number of hidden units were both set to 225 with the ```--emsize``` and ```--nhid``` flags, respectively.<br>
+
+To save the three perplexity values, the following modifications were made to ```main.py```:
+* Create flag ```--save_ppl``` as an optional CL argument
+* Modify ```train()``` so that it outputs the perplexity after each training epoch
+* Use the ```csv``` library to create one file per data subset (```ppls/ppl_train.csv```, ```ppls/ppl_valid.csv```, ```ppls/ppl_test.csv```)
+* Create the script ```word_language_model/plot_ppls.py``` to plot perplexities
+    * Use the ```pandas``` library to create a DataFrames out of the CSV logs
+    * Use the ```matplotlib``` library to create line plots from the DataFrame values
