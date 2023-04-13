@@ -1,0 +1,19 @@
+=========================================================================================
+data directory: /Users/alisonykim/Documents/master_uzh/_23fs_mt/ex/mt-2023-ex03/data/tarantino
+checkpoint: /Users/alisonykim/Documents/master_uzh/_23fs_mt/ex/mt-2023-ex03/data/tarantino
+number of words to generate: 200
+random seed: 1111
+device: MPS
+temperature: 0.9
+reporting interval: 50
+=========================================================================================
+I was done ? <eos> Well , which , I look like it , <unk> to every <unk> ? <eos>
+I &apos;m This looks over tomorrow , and big <unk> hands . <eos> I &apos;ll go to the <unk> .
+<eos> The Bride , said he didn &apos;t want me about it . <eos> Good dollars , our months I
+don &apos;t know that , but he &apos;s dressed like a pilot . <eos> The Bride raises his big cap
+out of her hand - and begins in the table pointed from the auditorium like her , and and says
+; You get an fucking strip . <eos> After Jackie , let me mean . <eos> My tee-shirt , no
+, windows , it &apos;s not too magic <unk> , <unk> , is <unk> in the book of Blade .
+<eos> We called that a <unk> of her destination the piece of fuckin &apos; it , they look to you
+, I didn &apos;t hafta hear it . <eos> You know . <eos> Broomhilda goes out of Los County ,
+lying down to the kitchen and arms up a PAN <unk> . <eos> I said called . &quot; <eos> We

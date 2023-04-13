@@ -1,0 +1,19 @@
+=========================================================================================
+data directory: /Users/alisonykim/Documents/master_uzh/_23fs_mt/ex/mt-2023-ex03/data/tarantino
+checkpoint: /Users/alisonykim/Documents/master_uzh/_23fs_mt/ex/mt-2023-ex03/data/tarantino
+number of words to generate: 200
+random seed: 1111
+device: MPS
+temperature: 0.75
+reporting interval: 50
+=========================================================================================
+. <eos> You think there &apos;s all which , I look like it , <unk> to the <unk> <unk> ,
+I &apos;ll show my ass tomorrow , and big <unk> . <eos> If I &apos;ll do where the <unk> <unk>
+<unk> ? <eos> It said he &apos;s not your granddad . <eos> The little <unk> Brothers <unk> , <unk> in
+the other side of her . <eos> <unk> around a <unk> attached to the left , and sit through the
+ground , and he takes out a <unk> space . <eos> We follow The Bride out , and and says
+; You &apos;re an fucking strip . <eos> After Jackie , let me mean . <eos> My men , a
+woman windows , is who <unk> . <eos> <unk> the <unk> , and <unk> , <unk> the Del Amo Company
+, and is is a <unk> of her fingers the <unk> , <unk> <unk> , <unk> . <eos> <unk> to
+be a <unk> <unk> , you &apos;re in the <unk> of a <unk> of the <unk> can understand , I
+&apos;m gonna have it . <eos> Just give me a <unk> . <eos> They said you . <eos> So it

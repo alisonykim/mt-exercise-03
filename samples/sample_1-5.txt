@@ -1,0 +1,19 @@
+=========================================================================================
+data directory: /Users/alisonykim/Documents/master_uzh/_23fs_mt/ex/mt-2023-ex03/data/tarantino
+checkpoint: /Users/alisonykim/Documents/master_uzh/_23fs_mt/ex/mt-2023-ex03/data/tarantino
+number of words to generate: 200
+random seed: 1111
+device: MPS
+temperature: 0.95
+reporting interval: 50
+=========================================================================================
+I was done ? <eos> Well , which , I look like it , <unk> to every <unk> Jules ,
+facing a Vincent SLAPS the tomorrow western brother big convertible , I &apos;m sure about it , the <unk> realistic
+&apos; ? <eos> It said he didn &apos;t want me about it . <eos> Good dollars , our months I
+don &apos;t know that , but he &apos;s dressed like Marcel &apos;s price with a <unk> . <eos> Why the
+fuck they do that - From school . <eos> So this time is too like five , that and I
+&apos;m gonna be an trap ? <eos> It ain &apos;t , let me mean . <eos> My tee-shirt , no
+, windows , it &apos;s not too magic <unk> , <unk> , is <unk> in the book of Blade .
+<eos> We called that a <unk> of her destination the piece of fuckin &apos; fallen <unk> . &quot; <eos> You
+ran a nigger about us up ? <eos> The <unk> directly . <eos> Broomhilda goes out of Los County ,
+lying forward , opens the door , and wipes the <unk> . <eos> He &apos;s called . <eos> Girl raises

@@ -1,0 +1,19 @@
+=========================================================================================
+data directory: /Users/alisonykim/Documents/master_uzh/_23fs_mt/ex/mt-2023-ex03/data/tarantino
+checkpoint: /Users/alisonykim/Documents/master_uzh/_23fs_mt/ex/mt-2023-ex03/data/tarantino
+number of words to generate: 200
+random seed: 1111
+device: MPS
+temperature: 1.25
+reporting interval: 50
+=========================================================================================
+sizes anywhere done ? <eos> Well , which keeps the look and I got <unk> information . <eos> Jules stands
+facing him whispers mad over tomorrow , due big convertible hands stall Whaddya , American throws sold . <eos> realistic
+&apos; ? <eos> It said Now company pay your usual needs about we can see Scotty realizes Beaumont sent in
+the hook The Farmer still walks over to make a mother attached to Pumpkin , who raises his big new
+fat accent against his slaver , and says to Beaumont pointed from Looking for Broomhilda , clutching that and says
+suddenly climbs into the depot . <eos> It needed Jackie , isn &apos;t sold for everybody guess . <eos> But
+I windows , it probably Grabbing this fields <unk> A.T.F. <eos> Zed is gonna ride now approach Why cupboard ,
+whoa rapid called that a THROWS of HEADS doctors in her answering flesh on fallen search . <eos> <unk> to
+be I didn &apos;t care up of them out . <eos> Now I always expect it for my turn ,
+we &apos;re referred for happen Wanna Just shut a PAN <unk> . <eos> sugar attack called . &quot; <eos> We

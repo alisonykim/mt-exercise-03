@@ -1,0 +1,19 @@
+=========================================================================================
+data directory: /Users/alisonykim/Documents/master_uzh/_23fs_mt/ex/mt-2023-ex03/data/tarantino
+checkpoint: /Users/alisonykim/Documents/master_uzh/_23fs_mt/ex/mt-2023-ex03/data/tarantino
+number of words to generate: 200
+random seed: 1111
+device: MPS
+temperature: 0.5
+reporting interval: 50
+=========================================================================================
+. <eos> The Bride &apos;s hand is <unk> , <unk> the <unk> . <eos> <unk> to the <unk> <unk> ,
+and <unk> the <unk> <unk> . <eos> The big <unk> of the <unk> <unk> <unk> <unk> <unk> . <eos> <unk>
+the <unk> of the <unk> of the <unk> . <eos> The Bride turns to the ground , and <unk> in
+the other side of the <unk> . <eos> The Bride &apos;s hand is <unk> , <unk> the <unk> <unk> .
+<eos> The Bride &apos;s <unk> , and the <unk> <unk> <unk> <unk> , <unk> the <unk> , and and <unk>
+the <unk> <unk> , and <unk> <unk> , and <unk> , <unk> , <unk> <unk> , and a <unk> <unk>
+, <unk> , and <unk> <unk> . <eos> <unk> the <unk> , and <unk> , <unk> <unk> , and <unk>
+, and <unk> , a <unk> of her <unk> the <unk> , <unk> <unk> , <unk> <unk> , <unk> <unk>
+, and a <unk> , <unk> , <unk> <unk> . <eos> I &apos;m gonna say , I &apos;m gonna be
+a <unk> . <eos> As soon as I &apos;m gonna get you to be a <unk> . <eos> The <unk>
