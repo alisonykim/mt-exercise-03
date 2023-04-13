@@ -1,3 +1,9 @@
+--epochs 40 \
+--mps \
+--log-interval 100 \
+--emsize 200 --nhid 200 --dropout 0.5 --tied \
+--save_model $models/model.pt
+
 | epoch   1 |   100/  204 batches | lr 20.00 | ms/batch 22.13 | loss  6.48 | ppl   648.75
 | epoch   1 |   200/  204 batches | lr 20.00 | ms/batch 16.66 | loss  5.66 | ppl   288.58
 -----------------------------------------------------------------------------------------
