@@ -47,6 +47,8 @@ Generate (sample) some text from a trained model with:
 ### Step 1: Choosing a dataset
 Our dataset comprises a selection of screenplays by Quentin Tarantino. They were downloaded from <a href="https://imsdb.com">The Internet Movie Script Database (IMSDb)</a> and <a href="https://www.dailyscript.com" target="_blank">Daily Script</a>. We ensured that the preprocessed dataset meets the length requirement set by the assignment, namely that it contains between 5,000-10,000 segments (sentences in our case).<br>
 
+**Content warning:** Unsurprisingly, Tarantino films contain profanity, including pejoratives based on race, gender, religion/creed, national origin, and other facets of identity. We ask the user to be aware of this when examining the datasets and generated outputs. The views, language, and behaviors of the characters in the screenplays do not necessarily reflect our own.<br>
+
 To download and preprocess the dataset, we made simple modifications to existing scripts:
 * ```scripts/download_data.sh```: add URLs to screenplays for download, concatenate screenplays into a single file, shuffle lines before performing train/valid/test split (all other sections remain the same other than filenames)
 * ```scripts/preprocess_raw.py```: remove unwanted characters that are specific to the screenplays, write lines to file only if they contain 6 or more tokens
@@ -61,3 +63,13 @@ An additional flag ```--log-print-statements``` allows the user to specify wheth
 * renaming the ```---save``` flag as ```---save_model``` to distinguish it from the flag ```save_ppl``` that we added in Part 2<br>
 
 As instructed, training was carried out with the original parameters specified in the training script. (Our interpretation of the instructions was to change settings only if training took longer than 2 hours.) The loss and perplexity updates printed to console can be found in ```logs/log_1.log```.
+
+### Step 3: Text generation
+To compare different generation parameters, we extended ```scripts/generate.sh``` with additional generation runs and different values of ```--temperature```. The generated results were saved to separate files by specifying different output filenames with the ```--outf``` flag.<br>
+
+### Step 4: Discussion/Reflection
+The dataset comprises several screenplays directed and/or written by Quentin Tarantino. Speech is not necessarily grammatical and sometimes not fluent, so we don't expect the generated text to reflect these qualities, either. For time reasons, we decided to include stage directions (e.g. "The sequence ends with the Bride arriving at Bill's home."), which we expect to impact the model.<br>
+
+Additionally, screenplays have specific structures, and there was variation between those in our dataset due to different formatting (e.g. HTML to TXT conversion). It would have been time-consuming to adapt ```scripts/preprocess{_raw}.py``` to every screenplay, so we decided to catch as many of these differences as possible within a general preprocessing paradigm. Still, the paradigm is not comprehensive, which we also expect to impact the model.<br>
+
+As expected, our generated text was quite nonsensical. After running generation with the standard parameters, we wondered what the text would look like if we decreased the temperature. Our intuition was that the text at least would be more grammatical, even if at the expense of output diversity. This was more or less the case, albeit largely due to the increased presence of \<eos\> and \<unk\> tokens.
