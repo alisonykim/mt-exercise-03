@@ -54,6 +54,10 @@ To download and preprocess the dataset, we made simple modifications to existing
 Of course, the above modifications are specific to the screenplays that we downloaded. Many parameters (e.g. how many lines to skip when concatenating each screenplay) were determined by manually examining each text file. We acknowledge that the preprocessing was not perfect and that this will certainly affect training.
 
 ### Step 2: Model training
-We trained the model on a MacOS GPU machine (M1 Pro). The availability of the GPU was verified in a Python environment using ```torch.backends.mps.is_available()``` and specified in the training bash script as a flag (```--mps```). To help with potential debugging, a small print statement was added to the aforementioned script to inform the user of the device being used. Additionally, the ```ArgumentParser``` description was changed to represent our dataset of choice. Finally, the flag ```save``` in ```tools/pytorch-examples/word_language_model/main.py``` was renamed ```save_model``` to distinguish it from the flag ```save_ppl``` that we added in Part 2.<br>
+We trained the model on a MacOS GPU machine (M1 Pro). The availability of the GPU was verified in a Python environment using ```torch.backends.mps.is_available()``` and specified in the training bash script as a flag (```--mps```).<br>
 
-As instructed, training was carried out with the original parameters specified in the training script. (Our interpretation of the instructions was to change settings only if training took longer than 2 hours.) The loss and perplexity updates printed to console can be found in ```logs/train_part1.log```.
+An additional flag ```--log-print-statements``` allows the user to specify whether output is printed to the console or to a log file, accessible in ```logs/```. Whether to the console or log file, the speciied training parameters are printed to help with potential debugging. Other changes to ```tools/pytorch-examples/word_language_model/main.py``` include:
+* changing the ```ArgumentParser``` description to represent our dataset of choice
+* renaming the ```---save``` flag as ```---save_model``` to distinguish it from the flag ```save_ppl``` that we added in Part 2<br>
+
+As instructed, training was carried out with the original parameters specified in the training script. (Our interpretation of the instructions was to change settings only if training took longer than 2 hours.) The loss and perplexity updates printed to console can be found in ```logs/log_1.log```.
