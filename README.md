@@ -77,12 +77,4 @@ As expected, our generated text was quite nonsensical. After running generation 
 Making the preprocessing paradigm more precise might improve the quality of generated text.
 
 ## 2. Parameter tuning: Experimenting with dropout
-For training with modifications to the dropout value, we created a copy of the training bash script titled ```train_dropout.sh```. The dropout values were modified in increments of 0.25, i.e. {0, 0.25, 0.50, 0.75, 1}, and each model was saved to a separate file {models/model_2-{1, 2, 3, 4, 5}}, respectively. The embedding size and number of hidden units were both set to 225 with the ```--emsize``` and ```--nhid``` flags, respectively.<br>
-
-To save the three perplexity values, the following modifications were made to ```main.py```:
-* Create flag ```--save_ppl``` as an optional CL argument
-* Modify ```train()``` so that it outputs the perplexity after each training epoch
-* Use the ```csv``` library to create one file per data subset (```ppls/ppl_train.csv```, ```ppls/ppl_valid.csv```, ```ppls/ppl_test.csv```)
-* Create the script ```word_language_model/plot_ppls.py``` to plot perplexities
-    * Use the ```pandas``` library to create a DataFrames out of the CSV logs
-    * Use the ```matplotlib``` library to create line plots from the DataFrame values
+Working on this...
