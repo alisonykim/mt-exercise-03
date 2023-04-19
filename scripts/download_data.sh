@@ -59,6 +59,6 @@ echo 'Shuffle lines'
 shuf data/tarantino/raw/tarantino.preprocessed.txt >> data/tarantino/raw/tarantino.shuffled.txt
 
 echo 'Split train/valid/test'
-head -n 14400 $data/tarantino/raw/tarantino.shuffled.txt > $data/tarantino/train.txt
-tail -n +14401 $data/tarantino/raw/tarantino.shuffled.txt | head -n 1800 > $data/tarantino/valid.txt
-tail -n +16200 $data/tarantino/raw/tarantino.shuffled.txt > $data/tarantino/test.txt
+head -n 8000 $data/tarantino/raw/tarantino.shuffled.txt > $data/tarantino/train.txt
+tail -n +8001 $data/tarantino/raw/tarantino.shuffled.txt | head -n 1000 > $data/tarantino/valid.txt
+tail -n +9001 $data/tarantino/raw/tarantino.shuffled.txt > $data/tarantino/test.txt
