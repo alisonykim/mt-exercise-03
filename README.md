@@ -77,4 +77,9 @@ As expected, our generated text was quite nonsensical. After running generation 
 Making the preprocessing paradigm more precise might improve the quality of generated text.
 
 ## 2. Parameter tuning: Experimenting with dropout
-Working on this...
+### Step 1: Training 5 models with varying dropout settings
+We trained 5 models with the following dropout settings: 0, 0.2, 0.5, 0.7 and 0.9. As not to overwrite
+the script from task 1, we saved the training bash script for task 2 separately as ```scripts/train_task2.sh```. We also added the ```save_ppl``` to ```tools/pytorch-examples/word_language_model/main.py``` in order to save the train, validation and test perplexities for each dropout setting in a csv file which were saved in the ```ppls``` directory.
+
+### Step 2: Creating tables and line charts
+With the script ```scripts/plot_perplexities.py``` we first created a table for each of the three different perplexities which contains the values of each of the models / dropout settings. The tables were stored in the ```ppl_tables``` directory. We then also created line charts for the training and validation perplexities which were saved in the ```ppl_plot``` directory.
