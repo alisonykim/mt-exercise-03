@@ -79,14 +79,17 @@ Making the preprocessing paradigm more precise might improve the quality of gene
 ## 2. Parameter tuning: Experimenting with dropout
 ### Step 1: Training 5 models with varying dropout settings
 We trained 5 models with the following dropout settings: 0, 0.2, 0.5, 0.7 and 0.9. As not to overwrite
-the script from task 1, we saved the training bash script for task 2 separately as ```scripts/train_task2.sh```. We also added the ```--save_ppl``` flag to ```tools/pytorch-examples/word_language_model/main.py``` in order to save the training, validation and test perplexities for each dropout setting in csv files which were saved in the ```ppls/``` directory. We additionally imported pandas in the ```main.py``` script to save the perplexities in a tabular format.
+the script from task 1, we saved the training bash script for task 2 separately as ```scripts/train_task2.sh```. We did not change the embedding size and number of hidden units (both 200). We also added the ```--save_ppl``` flag to ```tools/pytorch-examples/word_language_model/main.py``` in order to save the training, validation and test perplexities for each dropout setting in csv files which are in the ```ppls/``` directory. We additionally imported pandas in the ```main.py``` script to save the perplexities in a tabular format. The resulting models are in the ```models/``` directory (models 2-6).
 
 ### Step 2: Creating tables and line charts
 With the script ```scripts/plot_perplexities.py``` we first created a table for each of the three different perplexities which contains the values of all models / dropout settings (taking the files from ```ppls/``` as input). The tables were stored in the ```ppl_tables/``` directory. We then also created line charts for the training and validation perplexities which were saved in the ```ppl_plot/``` directory.
 
-### Step 3: Findings / Discussion
+### Step 3: Generating sample text with models that obtained highest and lowest test perplexity
+To generate sample texts using the models that obtained the highest and lowest test perplexity, we adapted ```scripts/generate.sh``` and saved the changes in ```scripts/generate_task2.sh```. The script uses model 3 (lowest test ppl) and model 6 (highest test ppl) to generate sample texts.
+
+### Step 4: Findings / Discussion
 #### Connection between training, validation and test perplexity
 There doesn't seem to be a clear connection between training, validation and test perplexity but there are some similarities. The lowest test perplexity and thus presumably the best performance was achieved with 0.2 dropout, followed by 0.5 and 0 dropout. Similarly, the lowest training perplexity was achieved with 0 dropout, followed by 0.2 and 0.5 dropout. By contrast, 0.5 dropout led to the lowest validation perplexity, followed by 0.2 and 0.7 dropout. As expected, the 0.9 dropout setting led to the highest training, validation and test perplexity by far. For the training and validation data, the perplexities decrease most significantly within the first 10 epochs, then stabilizing over the following 40 epochs. While for the training and test data, a model with a lower dropout setting performs better, this isn't as much the case with the validation data. However, overall it still seems likely that a dropout setting between 0.1 and 0.5 should work best for our data.
 
-#### Generating sample text with models that obtained highest and lowest test perplexity
+#### Comparison of generated sample texts
 As in part 1, the generated sample texts are still mostly nonsensical (see ```samples/``` directory). However, the sample text generated using the model with the lowest test perplexity is slightly more coherent and at least somewhat grammatical compared to the sample text obtained with the worst performing model (i.e. the highest test perplexity).
